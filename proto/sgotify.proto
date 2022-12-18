@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "./sgotify";
+service Sgotify {
+  rpc SendSpotifyAuth (SpotifyAuth) returns (SpotifyAuthReply) {}
+}
+
+// The request message containing the user's name.
+message SpotifyAuth {
+  string access_token = 1;
+  string token_type = 2;
+  string scope = 3;
+  int32 expires_in = 4;
+  string refresh_token = 5;
+}
+
+
+// The response message containing the greetings
+message SpotifyAuthReply {
+  string message = 1;
+}
