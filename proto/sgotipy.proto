@@ -1,0 +1,34 @@
+syntax = "proto3";
+// protoc -I=. --go_out=. --proto_path=/Users/giacomozanatta/Projects/sgotify/proto/ sgotipy.proto
+// 
+option go_package = "./sgotipy";
+
+service Sgotipy {
+  rpc StartSgotipy (StartSgotipyRequest) returns (StartSgotipyResponse) {}
+  rpc StopSgotipy (StopSgotipyRequest) returns (StopSgotipyResponse) {}
+  rpc SgotipyStatus (SgotipyStatusRequest) returns (SgotipyStatusResponse) {}
+}
+
+message StartSgotipyRequest {
+  string access_token = 1;
+  string token_type = 2;
+  string scope = 3;
+  int32 expires_in = 4;
+  string refresh_token = 5;
+}
+
+message StartSgotipyResponse {
+  string message = 1;
+}
+
+message StopSgotipyRequest {}
+
+message StopSgotipyResponse {
+  string message = 1;
+}
+
+message SgotipyStatusRequest {}
+
+message SgotipyStatusResponse {
+  string status = 1;
+}
