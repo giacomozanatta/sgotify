@@ -1,6 +1,3 @@
-[submodule "sgotify"]
-	path = sgotify
-	url = git@github.com:giacomozanatta/sgotify.git
 [submodule "sgotify-core"]
 	path = sgotify-core
 	url = git@github.com:giacomozanatta/sgotify-core.git
