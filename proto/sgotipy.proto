@@ -31,4 +31,13 @@ message SgotipyStatusRequest {}
 
 message SgotipyStatusResponse {
   string status = 1;
+  string device = 2;
+  string device_status = 3;
+  Song current_song = 4;
+}
+
+message Song {
+  string id = 1;
+  string title = 2;
+  string artists = 3;
 }
